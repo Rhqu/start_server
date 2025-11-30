@@ -1,0 +1,26 @@
+{
+  "connectors": [
+    {
+      "id": "alooWUD7jl2aVThUZlnA6",
+      "name": "TechData",
+      "url": "https://newsapi.org/v2/everything?q=tesla&from=2025-10-30&sortBy=publishedAt&apiKey=87ead47915024d6a856c31275997d872",
+      "enabled": true,
+      "categories": [
+        "liquidity",
+        "stocks",
+        "bonds",
+        "commodities",
+        "agriculture",
+        "direct-holdings",
+        "crypto",
+        "real-estate",
+        "art-collectibles"
+      ],
+      "tools": [
+        "government"
+      ],
+      "lastFetch": "2025-11-30T08:06:13.170Z",
+      "lastStatus": "success"
+    }
+  ]
+}
