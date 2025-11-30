@@ -1,0 +1,20 @@
+services:
+  # Truth Social API - Port 8000
+  truthsocial-api:
+    build:
+      context: ./Truthsocialapi
+      dockerfile: Dockerfile
+    container_name: truthsocial-investment-api
+    ports:
+      - "8000:8000"
+    environment:
+      - PORT=8000
+      - TRUTHSOCIAL_USERNAME=${TRUTHSOCIAL_USERNAME:-}
+      - TRUTHSOCIAL_PASSWORD=${TRUTHSOCIAL_PASSWORD:-}
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 15s
